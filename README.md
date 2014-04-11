@@ -164,4 +164,10 @@ job-ID  prior   name       user         state submit/start at     queue         
 
 ---
 
+#### Submitting a job (qsub)
+
+To submit a job, you need a submit script which is any executable script. The script contains all the configuration settings for the job. For example, the job name, which queue it should go to, where the output is, etc. Read the qsub documentation for details.
+
+Here we show two examples. A simple bash script and a more complex python script. The submit scripts are located under ```examples/submit_easy.sh``` and ```examples/submit_notsoeasy.sh```. 
+
 
