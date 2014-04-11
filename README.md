@@ -98,7 +98,7 @@ submit-em64t-01.hpc.engr.oregonstate.edu
 
 # I prefer bash (which loads my own environment through .bashrc)
 # import settings.csh if you're using tcsh
-bash
+[pinto@submit-em64t-01 ~]$ bash
 Sourcing python /nfs/stak/students/p/pinto/devel/python_env/py3/bin/activate
 (py3)bash-4.1$ ps
   PID TTY          TIME CMD
