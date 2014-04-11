@@ -70,3 +70,55 @@ Terminal type? [xterm]
  hexi     pts/32   flip1.engr.orego 03Apr14 39:35m  8:50   0.08s /bin/csh /usr/local/ap
  ```
 
+---
+
+#### Importing the cluster (SGE) environment
+
+This step will import the environment required to execute cluster commands.
+
+```sh
+[pinto@submit-em64t-01 ~]$ hostname
+submit-em64t-01.hpc.engr.oregonstate.edu
+# we are on the submit server
+
+# location holding the environment settings
+[pinto@submit-em64t-01 ~]$ ll /scratch/a1/sge/settings*
+-rw-r--r--. 1 root root 1007 Dec 19  2012 /scratch/a1/sge/settings.csh
+-rw-r--r--. 1 root root 1009 Dec 19  2012 /scratch/a1/sge/settings-mpich2.csh
+-rw-r--r--. 1 root root 1011 Dec 19  2012 /scratch/a1/sge/settings-mpich2i.csh
+-rw-r--r--. 1 root root  971 Mar 12 09:02 /scratch/a1/sge/settings-mpich2i.sh
+-rw-r--r--. 1 root root  969 Mar 12 09:01 /scratch/a1/sge/settings-mpich2.sh
+-rw-r--r--. 1 root root  907 Dec 19  2012 /scratch/a1/sge/settings.sh
+
+# Check which shell you're using
+[pinto@submit-em64t-01 ~]$ ps
+  PID TTY          TIME CMD
+ 2428 pts/21   00:00:00 tcsh
+ 4521 pts/21   00:00:00 ps
+
+# I prefer bash (which loads my own environment through .bashrc)
+# import settings.csh if you're using tcsh
+bash
+Sourcing python /nfs/stak/students/p/pinto/devel/python_env/py3/bin/activate
+(py3)bash-4.1$ ps
+  PID TTY          TIME CMD
+ 2428 pts/21   00:00:00 tcsh
+ 4629 pts/21   00:00:00 bash
+ 4649 pts/21   00:00:00 ps
+
+# now import the settings for bash
+(py3)bash-4.1$ source /scratch/a1/sge/settings.sh
+
+# test if cluster commands work
+(py3)bash-4.1$ qstat | head
+job-ID  prior   name       user         state submit/start at     queue                          jclass                         slots ja-task-ID
+------------------------------------------------------------------------------------------------------------------------------------------------
+6883283 0.50500 btpstK20   lettkema     r     03/12/2014 02:35:36 share@compute-4-4.hpc.engr.ore                                    1
+6937457 0.50500 boots4     lettkema     r     03/17/2014 19:23:03 share@compute-3-12.hpc.engr.or                                    1
+7016240 0.53227 PrInR2     alexg        r     03/26/2014 15:55:29 matsci@compute-5-4.hpc.engr.or                                    4
+7016247 0.53227 PrInR9     alexg        r     03/26/2014 15:55:29 share3@compute-8-12r.hpc.engr.                                    4
+7016250 0.53227 PrInR12    alexg        r     03/26/2014 15:55:29 matsci@compute-5-6.hpc.engr.or                                    4
+7088233 0.50500 Peng       leip         r     04/01/2014 21:49:53 eecs@compute-0-2.hpc.engr.oreg                                    1
+7091722 0.55045 I6TH2      desousal     r     04/02/2014 17:49:36 matsci@compute-5-4.hpc.engr.or                                    6
+7092204 0.50500 s70        orr          r     04/02/2014 21:51:36 share4@compute-6-26r.hpc.engr.                                    1
+```
