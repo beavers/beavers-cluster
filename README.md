@@ -142,7 +142,7 @@ share3                            0.02      4      0    228    232      0      0
 share4                            0.10      2      0    126    128      0      0
 ```
 
-* List all jobs for some user
+* List all jobs for user "emmott"
 ```
 (py3)bash-4.1$ qstat -u emmott | head
 job-ID  prior   name       user         state submit/start at     queue                          jclass                         slots ja-task-ID
