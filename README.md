@@ -160,51 +160,6 @@ job-ID  prior   name       user         state submit/start at     queue         
 * The qstat tool can do much, much more. Read its documentation.
 ```
 (py3)bash-4.1$ qstat -help
-UGE 8.1.0
-usage: qstat [options]
-        [-ext]                            view additional attributes
-		        [-explain a|c|A|E]                show reason for c(onfiguration ambiguous), a(larm), suspend A(larm), E(rror) state
-				        [-f]                              full output
-						        [-fjc]                            full output grouped according to job class instances
-								        [-F [resource_attributes]]        full output and show (selected) resources of queue(s)
-										        [-g {c}]                          display cluster queue summary
-												        [-g {d}]                          display all job-array tasks (do not group)
-														        [-g {t}]                          display all parallel job tasks (do not group)
-																        [-help]                           print this help
-																		        [-j job_identifier_list ]         show scheduler job information
-																				        [-l resource_list]                request the given resources
-																						        [-ne]                             hide empty queues
-																								        [-ncb]                            suppress additional binding specific parameters
-																										        [-pe pe_list]                     select only queues with one of these parallel environments
-																												        [-nenv]                           do not request job environment
-																														        [-njd]                            do not show details about foreign jobs
-																																        [-q wc_queue_list]                print information on given queue
-																																		        [-qs {a|c|d|o|s|u|A|C|D|E|S}]     selects queues, which are in the given state(s)
-																																				        [-r]                              show requested resources of job(s)
-																																						        [-s {p|r|s|z|hu|ho|hs|hd|hj|ha|h|a}] show pending, running, suspended, zombie jobs,
-																																								                                          jobs with a user/operator/system/array-dependency hold,
-																																																		                                            jobs with a start time in future or any combination only.
-																																																													                                          h is an abbreviation for huhohshdhjha
-																																																																							                                            a is an abbreviation for prsh
-																																																																																		        [-t]                              show task information (implicitly -g t)
-																																																																																				        [-u user_list]                    view only jobs of this user
-																																																																																						        [-U user_list]                    select only queues where these users have access
-																																																																																								        [-urg]                            display job urgency information
-																																																																																										        [-pri]                            display job priority information
-																																																																																												        [-xml]                            display the information in XML-Format
-
-pe_list                  pe[,pe,...]
-job_identifier_list      [job_id|job_name|pattern]{, [job_id|job_name|pattern]}
-resource_list            resource[=value][,resource[=value],...]
-user_list                user|@group[,user|@group],...]
-resource_attributes      resource,resource,...
-wc_cqueue                wildcard expression matching a cluster queue
-wc_host                  wildcard expression matching a host
-wc_hostgroup             wildcard expression matching a hostgroup
-wc_qinstance             wc_cqueue@wc_host
-wc_qdomain               wc_cqueue@wc_hostgroup
-wc_queue                 wc_cqueue|wc_qdomain|wc_qinstance
-wc_queue_list            wc_queue[,wc_queue,...]
 ```
 
 ---
