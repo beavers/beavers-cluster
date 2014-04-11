@@ -122,3 +122,45 @@ job-ID  prior   name       user         state submit/start at     queue         
 7091722 0.55045 I6TH2      desousal     r     04/02/2014 17:49:36 matsci@compute-5-4.hpc.engr.or                                    6
 7092204 0.50500 s70        orr          r     04/02/2014 21:51:36 share4@compute-6-26r.hpc.engr.                                    1
 ```
+---
+
+#### Basic cluster commands (qstat)
+
+* List all queues I have access to
+```sh
+(py3)bash-4.1$ qstat -g c -U pinto
+CLUSTER QUEUE                   CQLOAD   USED    RES  AVAIL  TOTAL aoACDS  cdsuE
+--------------------------------------------------------------------------------
+all.q                             -NA-      0      0      0      0      0      0
+ce                                0.52     12      0      4     16      0      0
+eecs                              0.33     36      0     72    108      0      0
+eecs2                             0.32     46      0     98    144      0      0
+em64t                             0.29     11      0     33     44      0      0
+share                             0.11      2      0     70     72      0      0
+share2                            0.12     17      0    215    232      0      0
+share3                            0.02      4      0    228    232      0      0
+share4                            0.10      2      0    126    128      0      0
+```
+
+* List all jobs for some user
+```
+(py3)bash-4.1$ qstat -u emmott | head
+job-ID  prior   name       user         state submit/start at     queue                          jclass                         slots ja-task-ID
+------------------------------------------------------------------------------------------------------------------------------------------------
+7170266 0.50500 ye.1006.ga emmott       r     04/11/2014 08:45:27 eecs2@compute-2-11.hpc.engr.or                                    1
+7170309 0.50500 ye.1007.ga emmott       r     04/11/2014 08:52:08 eecs2@compute-2-7.hpc.engr.ore                                    1
+7170310 0.50500 ye.1008.ga emmott       r     04/11/2014 08:52:08 eecs@compute-0-7.hpc.engr.oreg                                    1
+7170353 0.50500 ye.1009.ga emmott       r     04/11/2014 08:59:42 eecs2@compute-2-12.hpc.engr.or                                    1
+7170354 0.50500 ye.1010.ga emmott       r     04/11/2014 09:02:42 eecs2@compute-2-4.hpc.engr.ore                                    1
+7170355 0.50500 ye.1011.ga emmott       r     04/11/2014 09:02:42 eecs@compute-0-3.hpc.engr.oreg                                    1
+7170356 0.50500 ye.1012.ga emmott       r     04/11/2014 09:03:12 eecs2@compute-2-7.hpc.engr.ore                                    1
+7170357 0.50500 ye.1013.ga emmott       r     04/11/2014 09:05:42 eecs@compute-0-8.hpc.engr.oreg                                    1
+```
+
+* The qstat tool can do much, much more. Read its documentation.
+```
+(py3)bash-4.1$ qstat -help
+```
+---
+
+
