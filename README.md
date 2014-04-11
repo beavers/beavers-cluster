@@ -5,7 +5,7 @@ Oregon State University High Performance Cluster Documentation
 
 #### Getting access to the cluster
 
-Skip this step if you already have access. If not, use the lines below to check for access. Inside a terminal window, type
+Skip this step if you already have access. If not, use the lines below to check for access. Your username is your EECS/ENGR username. Inside a terminal window, type
 
 ```sh
 # ssh into the EECS machine
