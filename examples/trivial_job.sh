@@ -1,6 +1,9 @@
 #!/bin/bash
 
-DATA_DIR=$HOME/devel/data/cluster_test
+# write data to ./data
+BASE_DIR=`pwd`
+DATA_DIR=$BASE_DIR/data
+echo "Writing data to "$DATA_DIR
 
 # name the job
 #$ -N test_job
@@ -14,7 +17,7 @@ DATA_DIR=$HOME/devel/data/cluster_test
 #$ -q share4
 
 # specify where the output (stdout) must go
-#$ -o $HOME/devel/data/cluster_test/output2
+#$ -o $DATA_DIR/output2
 
 # combines stdout and stderr (all output goes to the above)
 #$ -j y
