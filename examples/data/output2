@@ -1,0 +1,65 @@
+hello cluster node
+starting at 
+Fri Apr 11 15:23:54 PDT 2014
+=======================
+HOSTNAME=compute-6-21r.hpc.engr.oregonstate.edu
+SGE_TASK_STEPSIZE=undefined
+SHELL=/bin/csh
+TERM=linux
+NHOSTS=1
+SGE_O_WORKDIR=/nfs/guille/u2/p/pinto/devel/code/beavers-cluster/examples
+TMPDIR=/tmp/7172627.1.share4
+SGE_O_HOME=/nfs/stak/students/p/pinto
+SGE_ARCH=lx-amd64
+SGE_CELL=default
+RESTARTED=0
+ARC=lx-amd64
+USER=pinto
+SGE_TASK_LAST=undefined
+QUEUE=share4
+SGE_TASK_ID=undefined
+SGE_BINARY_PATH=/scratch/a1/sge/bin/lx-amd64
+PATH=/tmp/7172627.1.share4:/usr/local/bin:/bin:/usr/bin
+runlevel=3
+RUNLEVEL=3
+SGE_STDERR_PATH=/nfs/stak/students/p/pinto/devel/code/beavers-cluster/examples/data/output2
+LANGSH_SOURCED=1
+PWD=/nfs/stak/students/p/pinto
+SGE_STDOUT_PATH=/nfs/stak/students/p/pinto/devel/code/beavers-cluster/examples/data/output2
+SGE_ACCOUNT=sge
+LANG=en_US.UTF-8
+JOB_SCRIPT=/scratch/a1/sge/default/spool/compute-6-21r/job_scripts/7172627
+JOB_NAME=test_job
+SGE_ROOT=/scratch/a1/sge
+previous=N
+PREVLEVEL=N
+REQNAME=test_job
+SGE_JOB_SPOOL_DIR=/scratch/a1/sge/default/spool/compute-6-21r/active_jobs/7172627.1
+ENVIRONMENT=BATCH
+CONSOLETYPE=vt
+HOME=/nfs/stak/students/p/pinto
+SHLVL=3
+SGE_CWD_PATH=/nfs/stak/students/p/pinto
+NQUEUES=1
+SGE_O_LOGNAME=pinto
+SGE_O_MAIL=/var/spool/mail/pinto
+UPSTART_INSTANCE=
+TMP=/tmp/7172627.1.share4
+JOB_ID=7172627
+LOGNAME=pinto
+UPSTART_EVENTS=runlevel
+SGE_TASK_FIRST=undefined
+SGE_O_PATH=/scratch/a1/sge/bin/lx-amd64:/nfs/guille/u2/p/pinto/devel/python_env/py3/bin:/bin:/sbin:/usr/local/bin:/usr/bin:/usr/local/apps/bin:/usr/bin/X11:/nfs/stak/students/p/pinto/devel/bin:.
+UPSTART_JOB=rc
+SGE_O_HOST=submit-em64t-01.hpc.engr.oregonstate.edu
+SGE_O_SHELL=/bin/tcsh
+REQUEST=test_job
+NSLOTS=1
+SGE_STDIN_PATH=/dev/null
+_=/bin/env
+=======================
+Linux compute-6-21r.hpc.engr.oregonstate.edu 2.6.32-220.13.1.el6.x86_64 #1 SMP Thu Mar 29 11:46:40 EDT 2012 x86_64 x86_64 x86_64 GNU/Linux
+=======================
+goodbye cluster node
+ending at 
+Fri Apr 11 15:23:54 PDT 2014

@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# write data to ./data
-BASE_DIR=`pwd`
-DATA_DIR=$BASE_DIR/data
-echo "Writing data to "$DATA_DIR
-
 # name the job
 #$ -N test_job
 
@@ -17,7 +12,8 @@ echo "Writing data to "$DATA_DIR
 #$ -q share4
 
 # specify where the output (stdout) must go
-#$ -o $DATA_DIR/output2
+# ensure that all directories are present on the path
+#$ -o $HOME/devel/code/beavers-cluster/examples/data/output2
 
 # combines stdout and stderr (all output goes to the above)
 #$ -j y
