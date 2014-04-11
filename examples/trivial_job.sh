@@ -23,7 +23,11 @@ DATA_DIR=$HOME/devel/data/cluster_test
 # here we execute some basic shell commands and exit
 
 echo "hello cluster node"
+echo "starting at "; date
+echo "======================="
 env
-date
+echo "======================="
 uname -a
+echo "======================="
 echo "goodbye cluster node"
+echo "ending at "; date
