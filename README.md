@@ -168,7 +168,54 @@ job-ID  prior   name       user         state submit/start at     queue         
 
 To submit a job, you need a submit script which is any executable script. The script contains all the configuration settings for the job. For example, the job name, which queue it should go to, where the output is, etc. Read the qsub documentation for details.
 
-Here we show two examples. A simple bash script performing elementary tasks and a more complex python job. The submit scripts are located under ```examples/trivial_job.sh``` and ```examples/non_trivial_job.sh```.
+Here we show a simple example of a bash script performing elementary tasks located at ```examples/trivial_job.sh```. First, go to the example directory and make sure you have (or create) a folder ```data``` and have the ```trivial_job.sh``` file.
+
+```sh
+(py3)bash-4.1$ pwd
+/nfs/stak/students/p/pinto/devel/code/beavers-cluster/examples
+(py3)bash-4.1$ tree
+.
+├── data
+└── trivial_job.sh
+
+1 directory, 1 file
+```
+
+Next, run the ```qsub``` command on the submit script.
+
+```sh
+(py3)bash-4.1$ qsub trivial_job.sh
+Your job 7172635 ("test_job") has been submitted
+(py3)bash-4.1$ qstat -u pinto
+job-ID  prior   name       user         state submit/start at     queue                          jclass                         slots ja-task-ID
+------------------------------------------------------------------------------------------------------------------------------------------------
+7172635 0.00000 test_job   pinto        qw    04/11/2014 15:34:44                                                                   1
+```
+
+Now check if the output has appeared.
+
+```sh
+(py3)bash-4.1$ tree
+.
+├── data
+│   └── output2
+└── trivial_job.sh
+
+1 directory, 2 files
+(py3)bash-4.1$ cat data/output2
+hello cluster node
+starting at
+Fri Apr 11 15:38:09 PDT 2014
+=======================
+Linux compute-6-17l.hpc.engr.oregonstate.edu 2.6.32-220.13.1.el6.x86_64 #1 SMP Thu Mar 29 11:46:40 EDT 2012 x86_64 x86_64 x86_64 GNU/Linux
+=======================
+goodbye cluster node
+ending at
+Fri Apr 11 15:38:09 PDT 2014
+```
+
+
+
 
 
 
