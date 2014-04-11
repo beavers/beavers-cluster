@@ -19,5 +19,54 @@ ssh -l <username> submit-em64t-01.hpc.engr.oregonstate.edu
 # if you have access, this step should land you on the submit server
 ```
 
----
+If you have access, you should see something like this,
+
+```
+[pinto@nome03 ~]$ ssh -l pinto submit-em64t-01.hpc.engr.oregonstate.edu
+Last login: Fri Apr 11 12:41:39 2014 from nome00.eecs.oregonstate.edu
+______________________________________________________________________________
+|This system is strictly for use by faculty, students, and staff of          |
+|       the College of Engineering, Oregon State University.                 |
+|                                                                            |
+|    Unauthorized access is prohibited - violators will be prosecuted        |
+|                                                                            |
+|      Use should be consistent with the OSU Acceptable Use Policy           |
+|       as well as College of Engineering policies and guidelines.           |
+|  Refer to http://engr.oregonstate.edu/computing/faqs/coe_aup/index.html    |
+|____________________________________________________________________________|
+|   Quotas are used for home directories, incoming email, and printing.      |
+|                    For details, check:                                     |
+|       http://engr.oregonstate.edu/computing/faqs/quotas.html               |
+|____________________________________________________________________________|
+|If you have any problems with this machine, mail support@engr.orst.edu      |
+|____________________________________________________________________________|
+| PLEASE DO NOT RUN JOBS ON THE SUBMIT HOST (THIS HOST). If you do not know  |
+| how to submit jobs to the queue please send mail to support@engr.orst.edu. |
+|                                                                            |
+| Please remember to source the SGE/MPI environment with:                    |
+| for mpich version 1 source /scratch/a1/sge/settings.csh                    |
+| for mpich version 2 source /scratch/a1/sge/settings-mpich2.csh             |
+| for mpich version 2 with the Intel fortran compiler you will want          |
+|   to source /scratch/a1/sge/settings-mpich2i.csh                           |
+|____________________________________________________________________________|
+
+Terminal type? [xterm]
+ 12:52:57 up 97 days, 20:36, 15 users,  load average: 0.32, 0.36, 0.35
+ USER     TTY      FROM              LOGIN@   IDLE   JCPU   PCPU WHAT
+ doggett  pts/0    matt-1.nacse.org 28Mar14  2days  3.24s  3.24s -tcsh
+ msander  pts/3    rocknroll.eecs.o 20Mar14  4:54m  0.29s  0.29s -tcsh
+ hexi     pts/5    flip1.engr.orego 02Apr14 23:00m 10.48s  0.08s /bin/csh /usr/local/ap
+ mosiert  pts/6    rog342-ksharp-1. Wed15   45:04m  6.11s  0.02s qrsh -q matsci
+ alkaee   pts/9    10-197-34-169.sd 08:41    4:11m  0.11s  0.11s -tcsh
+ hexi     pts/11   dear112-2.mime.o 04Apr14 25:40m  0.27s  0.27s -tcsh
+ guan     pts/16   holycross.eecs.o Thu01   24:54m  0.22s  0.22s -csh
+ hilkert  pts/17   treyoda.forestry 10:45    2:06m  0.10s  0.10s -tcsh
+ lamm     pts/18   128-193-252-120. Thu23   51:40   0.22s  0.22s -tcsh
+ machao   pts/19   aleutian.eecs.or Mon11    2days  0.36s  0.36s -tcsh
+ pinto    pts/20   nome00.eecs.oreg 12:41    9:01   0.14s  0.14s -tcsh
+ pinto    pts/21   nome03.eecs.oreg 12:52    1.00s  0.10s  0.03s w
+ irvine   pts/23   pilotstation.eec Wed09   14:15   0.21s  0.10s bash
+ irvine   pts/29   pilotstation.eec Wed10    2days  0.15s  0.01s bash
+ hexi     pts/32   flip1.engr.orego 03Apr14 39:35m  8:50   0.08s /bin/csh /usr/local/ap
+ ```
 
