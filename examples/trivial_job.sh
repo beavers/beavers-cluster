@@ -14,7 +14,7 @@ DATA_DIR=$HOME/devel/data/cluster_test
 #$ -q share4
 
 # specify where the output (stdout) must go
-#$ -o $HOME/devel/data/cluster_test/testjob_out_$1
+#$ -o $HOME/devel/data/cluster_test/output2
 
 # combines stdout and stderr (all output goes to the above)
 #$ -j y
